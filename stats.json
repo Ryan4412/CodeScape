@@ -1,0 +1,13 @@
+{
+    "totalTime": 0,
+    "totalExp": 0,
+    "totalLeval": 0,
+    "languages": [{
+        "extention": "",
+        "name": "",
+        "time": 0,
+        "exp": 0,
+        "level": 0
+    }],
+    "highestLevelLanguage": ""
+}
