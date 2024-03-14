@@ -1,13 +1,155 @@
 {
-    "totalTime": 0,
-    "totalExp": 0,
-    "totalLeval": 0,
-    "languages": [{
-        "extention": "",
-        "name": "",
-        "time": 0,
-        "exp": 0,
-        "level": 0
-    }],
-    "highestLevelLanguage": ""
+  "totalTime": 0,
+  "totalExp": 0,
+  "totalLevel": 0,
+  "languages": [
+    {
+      "extention": "py",
+      "name": "Python",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "js",
+      "name": "JavaScript",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "Java",
+      "name": "Java",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "cs",
+      "name": "C#",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "php",
+      "name": "PHP",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "cpp",
+      "name": "C++",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "c",
+      "name": "C",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "r",
+      "name": "R",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "swift",
+      "name": "Swift",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "kt",
+      "name": "Kotlin",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "json",
+      "name": "JSON",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "ts",
+      "name": "TypeScript",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "go",
+      "name": "Go",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "rs",
+      "name": "Rust",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "jsx",
+      "name": "React",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "html",
+      "name": "HTML",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "css",
+      "name": "CSS",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "sh",
+      "name": "Bash",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "md",
+      "name": "MarkDown",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "zig",
+      "name": "ZIG",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    },
+    {
+      "extention": "ml",
+      "name": "Ocaml",
+      "time": 0,
+      "exp": 0,
+      "level": 0
+    }
+  ],
+  "highestLevelLanguage": ""
 }

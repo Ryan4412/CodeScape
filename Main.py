@@ -1,6 +1,6 @@
 import os 
 import time
-from User import User
+from Session import Session
 
 print("Please enter the directory you will be programming in today:")
 path: str = input() # user enters directory they will be editing in 
@@ -24,4 +24,8 @@ for file in file_list:
 
 print(f'your files types are: {file_types}')
 
-myUser: User = User()
+newSession: Session = Session(file_types)
+
+while(True):
+    time.sleep(5)
+    newSession.run()
