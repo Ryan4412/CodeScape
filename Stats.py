@@ -19,5 +19,12 @@ class Stats():
 
     def updateLevel(self):
         self.level += 1
-
     
+    def updateLang(self, extention):
+        for lang in self.langs:
+            if lang.get('extention') == extention:
+                lang['time'] = lang.get('time') + 5
+                lang['exp'] = lang.get('exp') + 5
+                return self.langs
+                # lang['level'] = lang.get('level') + 1 # need to handle level system
+        return self.langs

@@ -24,8 +24,10 @@ for file in file_list:
 
 print(f'your files types are: {file_types}')
 
-newSession: Session = Session(file_types)
+newSession: Session = Session(file_types, path)
 
 while(True):
     time.sleep(5)
     newSession.run()
+
+

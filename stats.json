@@ -1,13 +1,13 @@
 {
-  "totalTime": 0,
-  "totalExp": 0,
+  "totalTime": 20,
+  "totalExp": 20,
   "totalLevel": 0,
   "languages": [
     {
       "extention": "py",
       "name": "Python",
-      "time": 0,
-      "exp": 0,
+      "time": 20,
+      "exp": 20,
       "level": 0
     },
     {
@@ -76,8 +76,8 @@
     {
       "extention": "json",
       "name": "JSON",
-      "time": 0,
-      "exp": 0,
+      "time": 20,
+      "exp": 20,
       "level": 0
     },
     {
@@ -132,8 +132,8 @@
     {
       "extention": "md",
       "name": "MarkDown",
-      "time": 0,
-      "exp": 0,
+      "time": 20,
+      "exp": 20,
       "level": 0
     },
     {
