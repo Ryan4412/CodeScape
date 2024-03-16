@@ -1,8 +1,7 @@
 import json
 from Stats import Stats
-import filecmp
 
-class Session(object):
+class DataSaver(object):
 
     def __init__(self, language_list, path):
         self.json_file = open('stats.json')

@@ -18,7 +18,7 @@
       "level": 0
     },
     {
-      "extention": "Java",
+      "extention": "java",
       "name": "Java",
       "time": 0,
       "exp": 0,
@@ -130,10 +130,10 @@
       "level": 0
     },
     {
-      "extention": "md",
-      "name": "MarkDown",
-      "time": 20,
-      "exp": 20,
+      "extention": "lua",
+      "name": "Lua",
+      "time": 0,
+      "exp": 0,
       "level": 0
     },
     {

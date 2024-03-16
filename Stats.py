@@ -1,5 +1,3 @@
-from LanguageStats import LanguageStats
-
 class Stats():
     def __init__(self, time, exp, level, langs, higestLevelLang, languagesThisSession):
         self.time: int = time
@@ -27,4 +25,3 @@ class Stats():
                 lang['exp'] = lang.get('exp') + 5
                 return self.langs
                 # lang['level'] = lang.get('level') + 1 # need to handle level system
-        return self.langs
