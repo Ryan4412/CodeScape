@@ -1,154 +1,154 @@
 {
-  "totalTime": 20,
-  "totalExp": 20,
+  "totalTime": 0,
+  "totalExp": 0,
   "totalLevel": 0,
   "languages": [
     {
       "extention": "py",
       "name": "Python",
-      "time": 20,
-      "exp": 20,
-      "level": 0
+      "time": 0,
+      "exp": 0,
+      "level": 1
     },
     {
       "extention": "js",
       "name": "JavaScript",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "java",
       "name": "Java",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "cs",
       "name": "C#",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "php",
       "name": "PHP",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "cpp",
       "name": "C++",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "c",
       "name": "C",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "r",
       "name": "R",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "swift",
       "name": "Swift",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "kt",
       "name": "Kotlin",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "json",
       "name": "JSON",
-      "time": 20,
-      "exp": 20,
-      "level": 0
+      "time": 0,
+      "exp": 0,
+      "level": 1
     },
     {
       "extention": "ts",
       "name": "TypeScript",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "go",
       "name": "Go",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "rs",
       "name": "Rust",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "jsx",
       "name": "React",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "html",
       "name": "HTML",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "css",
       "name": "CSS",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "sh",
       "name": "Bash",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "lua",
       "name": "Lua",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "zig",
       "name": "ZIG",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     },
     {
       "extention": "ml",
       "name": "Ocaml",
       "time": 0,
       "exp": 0,
-      "level": 0
+      "level": 1
     }
   ],
   "highestLevelLanguage": ""
