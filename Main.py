@@ -21,6 +21,8 @@ def list_files(directory) -> list:
     for root, dirs, files in os.walk(directory):
         for file in files:
             # print(os.path.join(root, file))
+            # s = os.path.join(root, file)
+            # print(s)
             # print(file)
             file_name: str = str(file)
             try:
@@ -29,7 +31,16 @@ def list_files(directory) -> list:
             except IndexError:
                 print(f"({file}) is not a valid Not a file")
 
-            
+    return file_list
+
+
+# recursivly walks through a directory and adds all the files in the path specified to the list
+def listFilesWithPath(directory) -> list:
+
+    file_list_with_path: list = []
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            file_list_with_path.append(os.path.join(root, file))
     
     return file_list
 
@@ -75,12 +86,13 @@ if not os.path.isdir(path):
         print("Invalid directory path.")
         exit()
 # file_list: list = os.listdir(path) # stores the list of files in the directory
-
 file_list: list = list_files(path)
+file_list_with_path: list = listFilesWithPath(path)
+print(file_list_with_path)
 file_types: dict = getFileTypes(file_list)
 extention_list: list = getExtentionList(file_list)
 
-event_handler = CodeScapeEventHandler(file_list, file_types, path, extention_list)
+event_handler = CodeScapeEventHandler(file_list, file_list_with_path, file_types, path, extention_list)
 observer = Observer()
 observer.schedule(event_handler, path=path, recursive=True)
 observer.start()
@@ -97,3 +109,15 @@ except KeyboardInterrupt:
     observer.stop()
 
 observer.join()
+
+##############################--- to do ---#################################
+#           - FIX ERROR WITH FILE PATHS BEING SAVED TO A LIST (TOP PRIORITY)
+#           - impliment file modification xp
+#           - impliment level up
+#           - handle adding new file to all needed lists
+#           - make ui
+#           - make title unlocks for languages
+#           - make low res osrs style animation of character coding
+# 
+# 
+# 

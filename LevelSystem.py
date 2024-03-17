@@ -26,8 +26,7 @@ class LevelSystem(object):
             90: 216420, 91: 235620, 92: 254820, 93: 274020, 94: 293220, 95: 312420, 96: 331620, 97: 350820, 98: 370020, 99: 389220
             # total time = 686.3 hours to hit level 99 in any language just based on game ticks
         }
-
-
+    
     def calcXpForLineChange(self, lines_edited: int, current_exp: int) -> int:
         if lines_edited <= 0:
             return current_exp + 1
@@ -36,7 +35,7 @@ class LevelSystem(object):
             return current_exp + 100
         
         return current_exp + lines_edited
-        
+
     def calcXpForGameLoopTick(self, current_exp: int) -> int:
         return current_exp + 5
     

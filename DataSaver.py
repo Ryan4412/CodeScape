@@ -13,30 +13,27 @@ class DataSaver(object):
         self.jsonObject: JsonObject = JsonObject(self.data['totalTime'], self.data['totalExp'], 
         self.data['totalLevel'], self.data['languages'], self.data['highestLevelLanguage'], language_list) # parses the individual json fields into python objects
 
-        self.level_system: LevelSystem = LevelSystem()
+        self.level_system: LevelSystem = LevelSystem() # level_system handles calculating xp and 
 
-        print(self.jsonObject.exp)
-        # self.editing_files = editing_files # [c/user/project_dir/main.py]
+        # print(self.jsonObject.exp)
         self.languages = self.data['languages'] # a list of dictionaries ex: [{'extention': 'py', 'name': 'Python', 'time': 0, 'exp': 0, 'level': 0}]
-        # print(self.languages)
+        # print(self.languages) # will print the json object in stats.json to the console
 
-    # def run(self):
-    #     self.data['totalTime'] = self.statsUpdateHelper.updateTime()
-    #     self.data['totalExp'] = self.statsUpdateHelper.updateExp()
-    #     print(self.statsUpdateHelper.exp)
-    #     for language in self.languages:
-    #         for extention in self.language_list:
-    #             if(language.get('extention') == extention):
-    #                 self.data['languages'] = self.statsUpdateHelper.updateLang(extention)
-    #     with open('stats.json', 'w') as update:
-    #         json.dump(self.data, update, indent=2)
 
     def addXpToLanguageForGameTick(self, extention: str):
         language_to_update: dict = self.jsonObject.getLang(extention) # gets a copy of the current langs dictionary
         language_to_update['exp'] = self.level_system.calcXpForGameLoopTick(language_to_update['exp']) # updates the copy with the new xp value
         self.jsonObject.updateLang(language_to_update) # updates the lang list in the json object with the new data
-        self.data['languages'] = self.jsonObject.langs
+        self.data['languages'] = self.jsonObject.langs # updates the jsonObject to be up to date with the changes made from xp incriment
         with open('stats.json', 'w') as update:
-            json.dump(self.data, update, indent=2)
+            json.dump(self.data, update, indent=2) # saves the changes to the stats.json file
+
+    def addXPtoLanguageForFileModification(self, extention: str, lines_changed: int):
+        language_to_update: dict = self.jsonObject.getLang(extention) # gets a copy of the current langs dictionary
+        language_to_update['exp'] = self.level_system.calcXpForLineChange(lines_changed, language_to_update['exp'],) # updates the copy with the new xp value
+        self.jsonObject.updateLang(language_to_update) # updates the lang list in the json object with the new data
+        self.data['languages'] = self.jsonObject.langs # updates the jsonObject to be up to date with the changes made from xp incriment
+        with open('stats.json', 'w') as update: 
+            json.dump(self.data, update, indent=2) # saves the changes to the stats.json file
 
 
