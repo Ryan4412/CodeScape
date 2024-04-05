@@ -71,5 +71,4 @@ class CodeScapeEventHandler(FileSystemEventHandler):
     def game_tick(self):
         random_index: int = random.randint(0, len(self.extention_list) - 1)
         self.data_saver.addXpToLanguageForGameTick(self.extention_list[random_index])
-        print(f"+ 5 {self.extention_list[random_index]} xp")
 

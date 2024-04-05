@@ -14,6 +14,9 @@ class LevelSystem(object):
             70: 1738800, 71: 1789200, 72: 1840320, 73: 1892160, 74: 1944720, 75: 1998000, 76: 2052000, 77: 2106720, 78: 2162160, 79: 2218320,
             80: 2275200, 81: 2332800, 82: 2391120, 83: 2450160, 84: 2509920, 85: 2570400, 86: 2631600, 87: 2693520, 88: 2756160, 89: 2819520,
             90: 2883600, 91: 2948400, 92: 3013920, 93: 3080160, 94: 3147120, 95: 3214800, 96: 3283200, 97: 3352320, 98: 3422160, 99: 3492720,
+            # each level takes 1 more hour than before to move to the next
+            # level 1 takes 1 hour, level 2 takes 2 hours, ... level 99 takes 99 hours
+            # the cumulative time takes 4950 hours to go from level 1 - 99 for any language
         }
     
     def calcXpForLineChange(self, lines_edited: int, current_exp: int) -> int:
@@ -32,4 +35,4 @@ class LevelSystem(object):
         return current_exp + 50
     
     def canLevelUp(self, language_level: int, current_xp: int) -> bool:
-        return self.exp_required_for_levelup[language_level] <= current_xp
+        return self.exp_required_for_levelup[language_level + 1] <= current_xp

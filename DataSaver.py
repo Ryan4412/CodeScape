@@ -23,6 +23,12 @@ class DataSaver(object):
     def addXpToLanguageForGameTick(self, extention: str):
         language_to_update: dict = self.jsonObject.getLang(extention) # gets a copy of the current langs dictionary
         language_to_update['exp'] = self.level_system.calcXpForGameLoopTick(language_to_update['exp']) # updates the copy with the new xp value
+        print(f"+ 5 {language_to_update['extention']} xp")
+        if self.level_system.canLevelUp(language_level = language_to_update['level'], current_xp = language_to_update['exp']):
+            new_level: int = language_to_update['level'] + 1
+            language_to_update['level'] = new_level
+            print(f"******* {language_to_update['name']} LEVEL UP! *******")
+            print(f"now level {new_level}")
         self.jsonObject.updateLang(language_to_update) # updates the lang list in the json object with the new data
         self.data['languages'] = self.jsonObject.langs # updates the jsonObject to be up to date with the changes made from xp incriment
         with open('stats.json', 'w') as update:
