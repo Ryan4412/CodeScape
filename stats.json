@@ -7,7 +7,7 @@
       "extention": "py",
       "name": "Python",
       "time": 0,
-      "exp": 103,
+      "exp": 40,
       "level": 1
     },
     {
@@ -42,14 +42,14 @@
       "extention": "cpp",
       "name": "C++",
       "time": 0,
-      "exp": 0,
+      "exp": 115,
       "level": 1
     },
     {
       "extention": "c",
       "name": "C",
       "time": 0,
-      "exp": 108,
+      "exp": 15,
       "level": 1
     },
     {
@@ -77,7 +77,7 @@
       "extention": "json",
       "name": "JSON",
       "time": 0,
-      "exp": 1438,
+      "exp": 0,
       "level": 1
     },
     {

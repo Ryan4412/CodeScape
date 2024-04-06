@@ -19,20 +19,20 @@ class LevelSystem(object):
             # the cumulative time takes 4950 hours to go from level 1 - 99 for any language
         }
     
-    def calcXpForLineChange(self, lines_edited: int, current_exp: int) -> int:
+    def calcXpForLineChange(self, lines_edited: int) -> int:
         if lines_edited <= 0:
-            return current_exp + 1
+            return 1
         
         if lines_edited >= 100:
-            return current_exp + 100
+            return 100
         
-        return current_exp + lines_edited
+        return lines_edited
 
     def calcXpForGameLoopTick(self, current_exp: int) -> int:
         return current_exp + 5
     
-    def calcXPForMakingNewFile(self, current_exp: int) -> int:
-        return current_exp + 50
+    def calcXPForMakingNewFile(self) -> int:
+        return 50
     
     def canLevelUp(self, language_level: int, current_xp: int) -> bool:
         return self.exp_required_for_levelup[language_level + 1] <= current_xp

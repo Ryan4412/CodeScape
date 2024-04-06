@@ -105,7 +105,7 @@ observer.start()
 try:
     while(True):
         time.sleep(5)
-        # event_handler.game_tick() # uncomment this line when file path is working
+        event_handler.game_tick()
 except KeyboardInterrupt:
     print(f"Total line changes this session: {event_handler.line_changes}")
     observer.stop()
