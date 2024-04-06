@@ -4,6 +4,7 @@ from DataSaver import DataSaver
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from CodeScapeEventHandler import CodeScapeEventHandler
+from pathlib import Path
 
 # recursivly walks through a directory and adds all the files in the path specified to the list
 def list_files(directory) -> list:
@@ -37,12 +38,16 @@ def list_files(directory) -> list:
 # recursivly walks through a directory and adds all the files in the path specified to the list
 def listFilesWithPath(directory) -> list:
 
-    file_list_with_path: list = []
+    file_list_with_path: list[Path] = []
     for root, dirs, files in os.walk(directory):
         for file in files:
-            file_list_with_path.append(os.path.join(root, file))
+            # print(os.path.join(root, file))
+            # print(Path(os.path.join(root, file)))
+            file_list_with_path.append(Path(os.path.join(root, file)))
+
+    print(file_list_with_path)
     
-    return file_list
+    return file_list_with_path
 
 def getFileTypes(file_list) -> dict:
     file_types: dict = {
@@ -87,7 +92,7 @@ if not os.path.isdir(path):
         exit()
 # file_list: list = os.listdir(path) # stores the list of files in the directory
 file_list: list = list_files(path)
-file_list_with_path: list = listFilesWithPath(path)
+file_list_with_path: list[Path] = listFilesWithPath(path)
 print(file_list_with_path)
 file_types: dict = getFileTypes(file_list)
 extention_list: list = getExtentionList(file_list)
@@ -97,13 +102,10 @@ observer = Observer()
 observer.schedule(event_handler, path=path, recursive=True)
 observer.start()
 
-# newSession: DataSaver = DataSaver(file_types, path)
-
 try:
     while(True):
         time.sleep(5)
-        event_handler.game_tick()
-        # newSession.run()
+        # event_handler.game_tick() # uncomment this line when file path is working
 except KeyboardInterrupt:
     print(f"Total line changes this session: {event_handler.line_changes}")
     observer.stop()
@@ -113,7 +115,6 @@ observer.join()
 ##############################--- to do ---#################################
 #           - FIX ERROR WITH FILE PATHS BEING SAVED TO A LIST (TOP PRIORITY)
 #           - impliment file modification xp
-#           - impliment level up
 #           - handle adding new file to all needed lists
 #           - make ui
 #           - make title unlocks for languages

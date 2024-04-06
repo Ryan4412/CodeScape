@@ -3,6 +3,7 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from DataSaver import DataSaver
 import random
+from pathlib import Path
 
 class CodeScapeEventHandler(FileSystemEventHandler):
     def __init__(self, file_list: list, file_list_with_path: list, file_types: dict, path: str, extention_list: list):
@@ -10,11 +11,11 @@ class CodeScapeEventHandler(FileSystemEventHandler):
         self.data_saver: DataSaver = DataSaver(file_types, path)
         self.extention_list: list = extention_list
         self.file_list_with_path: list = file_list_with_path
-        self.file_dict = {}
+        self.file_dict: dict = {}
         for file in file_list:
             # if file in self.file_dict:
             for file_path in file_list_with_path:
-                file_name: str = file_path
+                file_name: Path = Path(file_path)
                 file_name: str = str(os.path.basename(file_name))
                 if file_name == file:
                     print(f"compairing {file} and {file_name}")
@@ -28,6 +29,8 @@ class CodeScapeEventHandler(FileSystemEventHandler):
         try:
             with open(file, 'r') as file:
                 return len(file.readlines())
+            # with file.open() as file:
+            #     return file.__sizeof__()
         except FileNotFoundError:
             print("File was not found durrent line_count")
 
