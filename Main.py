@@ -111,14 +111,3 @@ except KeyboardInterrupt:
     observer.stop()
 
 observer.join()
-
-##############################--- to do ---#################################
-#           - FIX ERROR WITH FILE PATHS BEING SAVED TO A LIST (TOP PRIORITY)
-#           - impliment file modification xp
-#           - handle adding new file to all needed lists
-#           - make ui
-#           - make title unlocks for languages
-#           - make low res osrs style animation of character coding
-# 
-# 
-# 

@@ -3,5 +3,5 @@ A level tracker for programming languages inspired by the RuneScape skill level 
 
 # Dependencies
 run the following commands to be able to run the project:     
-pip install watchdog     
-pip install customtkinter
+    pip install watchdog     
+    pip install customtkinter
