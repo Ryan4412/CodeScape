@@ -5,3 +5,4 @@ A level tracker for programming languages inspired by the RuneScape skill level 
 run the following commands to be able to run the project:     
     pip install watchdog     
     pip install customtkinter
+    pip install Pillow
